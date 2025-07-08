@@ -5,11 +5,11 @@ const nodemailer = require("nodemailer");
 const generateOtp = () => Math.floor(100000 + Math.random() * 900000).toString();
 const bcrypt = require('bcryptjs');
 let app=express();
-// app.use(cors());
-app.use(cors({
-  origin: ['https://hrbackend-hmfm.onrender.com'], // ← your Hostinger frontend URL
-  credentials: true
-}));
+app.use(cors());
+// app.use(cors({
+//   origin: ['https://hrbackend-hmfm.onrender.com'], // ← your Hostinger frontend URL
+//   credentials: true
+// }));
 
 app.use(express.json());  // Make sure this line is included
 
