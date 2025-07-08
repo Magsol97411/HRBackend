@@ -92,8 +92,8 @@ const EmployeeSalarySchema = new mongoose.Schema({
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "xyz@gmail.com", // Replace with your email
-    pass: "npcb ajly raog njaz",  // Use an App Password if using Gmail
+    user: "magsolengineering@gmail.com", // Replace with your email
+    pass: "boar buzo caiw jpfq",  // Use an App Password if using Gmail
   },
 });
 //   / POST: Create a new employee salary record
@@ -129,7 +129,7 @@ app.post("/add-salary", async (req, res) => {
 
     // Email content
     const mailOptions = {
-      from: "xyz@gmail.com", // Replace with your email
+      from: "magsolengineering@gmail.com", // Replace with your email
       to: email,
       subject: "Welcome to Magsol Technologies",
       text: `Dear ${name},\n\nWelcome to Magsol Technologies! We are excited to have you on board.\n\nYou will receive all your payslips at this email every month.\n\nBest regards,\nMagsol Technologies`,
@@ -260,7 +260,7 @@ app.put("/employees/:id", async (req, res) => {
   
       // Send OTP via email
       await transporter.sendMail({
-        from: "xyz@gmail.com",
+        from: "magsolengineering@gmail.com",
         to: email,
         subject: "Password Reset OTP",
         text: `Your OTP for password reset is: ${otp}`,
@@ -558,7 +558,7 @@ if (existingPayslip) {
       const date = currentDate.getDate();
       
       const mailOptions = {
-        from: "xyz@gmail.com",
+        from: "magsolengineering@gmail.com",
         to: employee.email,
         subject: `Payslip for ${employee.name} - Employee ID: ${employeeId} (${month} ${year})`,
         html: `
