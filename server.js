@@ -3,7 +3,7 @@ const mongoose =require("mongoose");
 const cors =require("cors");
 const nodemailer = require("nodemailer");
 const generateOtp = () => Math.floor(100000 + Math.random() * 900000).toString();
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcryptjs');
 let app=express();
 app.use(cors());
 app.use(express.json());  // Make sure this line is included
