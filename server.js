@@ -64,9 +64,7 @@ const EmployeeSalarySchema = new mongoose.Schema({
       type: Number
         },
    uan: {
-  type: String,
-  trim: true,
-  sparse: true // Allow multiple docs without UAN, but still enforce uniqueness when UAN is present
+  type: String
 },
     pf:{
       type:Number,
